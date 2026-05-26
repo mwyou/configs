@@ -50,16 +50,7 @@ sniffer:
 
 # 入站  
 tun:
-  enable: true
-  # system/gvisor/mixed
-  stack: mixed
-  dns-hijack: ["any:53", "tcp://any:53"]
-  #使用nikki，混入全部不修改的情况，开启接口指定为nikki
-  #使用仅内核自行修改下面三项为true
-  #device: nikki
-  auto-route: false
-  auto-redirect: false
-  auto-detect-interface: false
+  enable: false
 
 # DNS模块
 dns:
@@ -125,9 +116,9 @@ rules:
   - RULE-SET,webofscience,🟢 直连
   - RULE-SET,private,🟢 直连
   - RULE-SET,private_ip,🟢 直连,no-resolve
-  - RULE-SET,proxylite,🚀 Proxy Select
   - RULE-SET,cn,🟢 直连
   - RULE-SET,cn_ip,🟢 直连
+  
   - RULE-SET,youtube,📹 YouTube
   - RULE-SET,youtube_ip,📹 YouTube
   - RULE-SET,google,🍀 Google
@@ -148,9 +139,11 @@ rules:
   - RULE-SET,twitter_ip,🦜 Twitter
   - RULE-SET,onedrive,🐬 OneDrive
   - RULE-SET,microsoft,🪟 Microsoft
-  - RULE-SET,apple,🟢 直连
-  - RULE-SET,apple_ip,🟢 直连
+  - RULE-SET,apple,🟢 Apple
+  - RULE-SET,apple_ip,🟢 Apple
   - RULE-SET,paypal,💶 PayPal
+  
+  - RULE-SET,proxylite,🚀 Proxy Select
   - RULE-SET,geolocation-!cn,🚀 Proxy Select
   - MATCH,🐟 Others
   
@@ -206,4 +199,4 @@ rule-providers:
   apple:              { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs" }
   apple_ip:           { <<: *ip,     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/apple.mrs" }
   paypal:             { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs" }
-  geolocation-!cn:    { <<: *ip,     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/geolocation-!cn.mrs" }
+  geolocation-!cn:    { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/geolocation-!cn.mrs" }
