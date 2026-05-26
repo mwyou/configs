@@ -136,6 +136,9 @@ proxy-groups:
   - {name: 🐟 Others,       <<: *pr}
   
 rules:
+  # 防止谷歌学术直连
+  - DOMAIN-SUFFIX,scholar.google.com,🧭 Proxy Select
+  - DOMAIN-SUFFIX,scholar.googleusercontent.com,🧭 Proxy Select
   # 学术直连
   - RULE-SET,scholar,🏠 Direct
   - RULE-SET,scholar_cn,🏠 Direct
