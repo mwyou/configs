@@ -95,6 +95,10 @@ dns:
     - "+.ntp.org.cn"
     - "+.pool.ntp.org"
     - "+.market.xiaomi.com"
+    # tailscale组网
+    - "+.tailscale.com"
+    - "+.tailscale.io"
+    - "+.ts.net"
     # 自己的网站
     - "+.698891.xyz"
     - "+.apioai.com"
@@ -135,6 +139,10 @@ rules:
   # 学术直连
   - RULE-SET,scholar,🏠 Direct
   - RULE-SET,scholar_cn,🏠 Direct
+  # tailscale组网直连
+  - DOMAIN-SUFFIX,tailscale.com,🏠 Direct
+  - DOMAIN-SUFFIX,tailscale.io,🏠 Direct
+  - DOMAIN-SUFFIX,ts.net,🏠 Direct
   
   - RULE-SET,private,🏠 Direct
   - RULE-SET,private_ip,🏠 Direct,no-resolve
