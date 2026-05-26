@@ -137,31 +137,31 @@ rules:
   - RULE-SET,scholar_cn,🏠 Direct
   
   - RULE-SET,private,🏠 Direct
-  - RULE-SET,private_ip,🏠 Direct, no-resolve
+  - RULE-SET,private_ip,🏠 Direct,no-resolve
   - RULE-SET,cn,🏠 Direct
-  - RULE-SET,cn_ip,🏠 Direct, no-resolve
+  - RULE-SET,cn_ip,🏠 Direct,no-resolve
   
   - RULE-SET,youtube,📹 YouTube
   
   - RULE-SET,google,🅖 Google
-  - RULE-SET,google_ip,🅖 Google, no-resolve
+  - RULE-SET,google_ip,🅖 Google,no-resolve
   
   - RULE-SET,github,👨🏿‍💻 GitHub
   
   - RULE-SET,ai,🤖 AI
   
   - RULE-SET,netflix,🎬 Netflix
-  - RULE-SET,netflix_ip,🎬 Netflix, no-resolve
+  - RULE-SET,netflix_ip,🎬 Netflix,no-resolve
   
   - RULE-SET,telegram,✈️ Telegram
-  - RULE-SET,telegram_ip,✈️ Telegram, no-resolve
+  - RULE-SET,telegram_ip,✈️ Telegram,no-resolve
   
   - RULE-SET,tiktok,🎵 TikTok
   
   - RULE-SET,docker,🐳 Docker
   
   - RULE-SET,twitter,𝕏 Twitter
-  - RULE-SET,twitter_ip,𝕏 Twitter, no-resolve
+  - RULE-SET,twitter_ip,𝕏 Twitter,no-resolve
   
   - RULE-SET,onedrive,☁️ OneDrive
   - RULE-SET,microsoft,🪟 Microsoft
@@ -175,9 +175,9 @@ rules:
   - MATCH,🐟 Others
   
 rule-anchor:
-  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
-  domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
-  class: &class {type: http, interval: 86400, behavior: classical, format: text}
+  ip:      &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
+  domain:  &domain {type: http, interval: 86400, behavior: domain, format: mrs}
+  class:   &class {type: http, interval: 86400, behavior: classical, format: text}
 
 rule-providers:
   # 学术直连
@@ -219,4 +219,4 @@ rule-providers:
   
   paypal:             { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs" }
   
-  geolocation-!cn:    { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/geolocation-!cn.mrs" }
+  geolocation-!cn:    { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs" }
