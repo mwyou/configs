@@ -139,11 +139,20 @@ rules:
   # 学术直连
   - RULE-SET,scholar,🏠 Direct
   - RULE-SET,scholar_cn,🏠 Direct
+  
   # tailscale组网直连
   - DOMAIN-SUFFIX,tailscale.com,🏠 Direct
   - DOMAIN-SUFFIX,tailscale.io,🏠 Direct
   - DOMAIN-SUFFIX,ts.net,🏠 Direct
   
+  # 自己的网站直连
+  - DOMAIN-SUFFIX,698891.xyz,🏠 Direct
+  - DOMAIN-SUFFIX,apioai.com,🏠 Direct
+  - DOMAIN-SUFFIX,ktuai.com,🏠 Direct
+  - DOMAIN-SUFFIX,coioai.com,🏠 Direct
+  - DOMAIN-SUFFIX,tmgcai.com,🏠 Direct
+
+  # 通用规则
   - RULE-SET,private,🏠 Direct
   - RULE-SET,private_ip,🏠 Direct,no-resolve
   - RULE-SET,cn,🏠 Direct
