@@ -5,16 +5,27 @@ proxies:
 #订阅节点
 proxy-providers:
   Airport1:
-    url: "example.com"
+    url: "https://example.com/sub/xxxx"
     type: http
     interval: 3600
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
+      url: https://cp.cloudflare.com/generate_204
       interval: 300
     proxy: 🏠 Direct
 
+  Airport2:
+    url: "https://example.com/sub/xxxx"
+    type: http
+    interval: 3600
+    health-check:
+      enable: true
+      url: https://cp.cloudflare.com/generate_204
+      interval: 300
+    proxy: 🏠 Direct
+    
 # 全局配置 
+mode: rule
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -50,6 +61,12 @@ sniffer:
     - "+.v2ex.com"
   skip-domain:
     - "+.baidu.com"
+    - "+.qq.com"
+    - "+.taobao.com"
+    - "+.jd.com"
+    - "+.alicdn.com"
+    - "+.mi.com"
+    - "+.xiaomi.com"
 
 # 入站  
 tun:
@@ -78,7 +95,7 @@ dns:
     - "+.ntp.org.cn"
     - "+.pool.ntp.org"
     - "+.market.xiaomi.com"
-    
+    # 自己的网站
     - "+.698891.xyz"
     - "+.apioai.com"
     - "+.ktuai.com"
@@ -164,8 +181,8 @@ rule-anchor:
 
 rule-providers:
   # 学术直连
-  scholar:    { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-scholar-!cn.mrs" }
-  scholar_cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-scholar-cn.mrs" }
+  scholar:            { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-scholar-!cn.mrs" }
+  scholar_cn:         { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-scholar-cn.mrs" }
   
   private:            { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs" }
   private_ip:         { <<: *ip,     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs" }
