@@ -1,0 +1,13 @@
+payload:
+  - DOMAIN,region1.v2.argotunnel.com
+  - DOMAIN,region2.v2.argotunnel.com
+  - DOMAIN,_v2-origintunneld._tcp.argotunnel.com
+  - DOMAIN-SUFFIX,argotunnel.com
+  - DOMAIN-SUFFIX,cftunnel.com
+  - DOMAIN,api.cloudflare.com
+  - DOMAIN,update.argotunnel.com
+  - DOMAIN,cfd-features.argotunnel.com
+  - IP-CIDR,198.41.192.0/24,no-resolve
+  - IP-CIDR,198.41.200.0/24,no-resolve
+  - IP-CIDR6,2606:4700:a0::/64,no-resolve
+  - IP-CIDR6,2606:4700:a8::/64,no-resolve
