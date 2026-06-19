@@ -153,12 +153,7 @@ rules:
   - RULE-SET,cloudflare_tunnel_ip,🏠 Direct
   
   # 自己的网站直连
-  - DOMAIN-SUFFIX,698891.xyz,🏠 Direct
-  - DOMAIN-SUFFIX,apioai.com,🏠 Direct
-  - DOMAIN-SUFFIX,ktuai.com,🏠 Direct
-  - DOMAIN-SUFFIX,coioai.com,🏠 Direct
-  - DOMAIN-SUFFIX,tmgcai.com,🏠 Direct
-  - DOMAIN-SUFFIX,cou.edu.kg,🏠 Direct
+  - RULE-SET,direct_sites,🏠 Direct
   
   # GZU
   - DOMAIN-SUFFIX,gzu.edu.cn,🏠 Direct
@@ -216,6 +211,9 @@ rule-providers:
   # 学术直连
   scholar:               { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-scholar-!cn.mrs" }
   scholar_cn:            { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-scholar-cn.mrs" }
+  
+  #自己网站
+  direct_sites:          { <<: *domain, url: "https://raw.githubusercontent.com/mwyou/configs/main/rule-set/direct-sites.mrs" }
   
   private:               { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs" }
   private_ip:            { <<: *ip,     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs" }
