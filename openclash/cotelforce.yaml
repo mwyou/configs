@@ -154,9 +154,6 @@ rules:
   
   # 自己的网站直连
   - RULE-SET,direct_sites,🏠 Direct
-  
-  # GZU
-  - DOMAIN-SUFFIX,gzu.edu.cn,🏠 Direct
 
   # 通用规则
   - RULE-SET,private,🏠 Direct
