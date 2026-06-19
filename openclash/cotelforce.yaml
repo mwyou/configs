@@ -151,7 +151,8 @@ rules:
   - DOMAIN-SUFFIX,tailscale.io,🏠 Direct
   - DOMAIN-SUFFIX,ts.net,🏠 Direct
   # cloudflare-tunnel直连
-  - RULE-SET,cloudflare-tunnel,🏠 Direct
+  - RULE-SET,cloudflare_tunnel,🏠 Direct
+  - RULE-SET,cloudflare_tunnel_ip,🏠 Direct
   
   # 自己的网站直连
   - DOMAIN-SUFFIX,698891.xyz,🏠 Direct
@@ -210,7 +211,8 @@ rule-anchor:
 
 rule-providers:
 
-  cloudflare_tunnel:  { <<: *class_yaml, url: "https://raw.githubusercontent.com/mwyou/configs/main/rule-set/cloudflare-tunnel.yaml" }
+  cloudflare_tunnel:     { <<: *domain, url: "https://raw.githubusercontent.com/mwyou/configs/main/rule-set/cloudflare-tunnel.mrs" }
+  cloudflare_tunnel_ip:  { <<: *ip,     url: "https://raw.githubusercontent.com/mwyou/configs/main/rule-set/cloudflare-tunnel-ip.mrs" }
   
   # 学术直连
   scholar:            { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-scholar-!cn.mrs" }
