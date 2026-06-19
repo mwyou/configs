@@ -106,6 +106,8 @@ dns:
     - "+.coioai.com"
     - "+.tmgcai.com"
     - "+.cou.edu.kg"
+    # GZU
+    - "+.gzu.edu.cn"
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
@@ -120,20 +122,20 @@ dns:
 pr: &pr {type: select, proxies: [🏠 Direct, 🧭 Proxy Select]}
 
 proxy-groups:
-  - {name: 🧭 Proxy Select, type: select, proxies: [🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: 📹 YouTube,      type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: 🅖 Google,       type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: 👨🏿‍💻 GitHub,       type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: 🤖 AI,           type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: 🎬 Netflix,      type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: ✈️ Telegram,     type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: 🎵 TikTok,       type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: 🐳 Docker,       type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: 𝕏 Twitter,       type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: ☁️ OneDrive,     type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: 🪟 Microsoft,    type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: 💳 PayPal,       type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
-  - {name: 🍎 Apple,        type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|C202604211042848"}
+  - {name: 🧭 Proxy Select, type: select, proxies: [🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: 📹 YouTube,      type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: 🅖 Google,       type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: 👨🏿‍💻 GitHub,       type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: 🤖 AI,           type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: 🎬 Netflix,      type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: ✈️ Telegram,     type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: 🎵 TikTok,       type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: 🐳 Docker,       type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: 𝕏 Twitter,       type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: ☁️ OneDrive,     type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: 🪟 Microsoft,    type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: 💳 PayPal,       type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
+  - {name: 🍎 Apple,        type: select, proxies: [🧭 Proxy Select, 🏠 Direct], include-all: true, filter: "(?i)新加坡|日本|台湾|美国|racknerd|cotelforce|mwyou168|zoro|dedirock-ny|dedirock-la"}
   - {name: 🐟 Others,       <<: *pr}
   
 rules:
@@ -143,7 +145,7 @@ rules:
   # 学术直连
   - RULE-SET,scholar,🏠 Direct
   - RULE-SET,scholar_cn,🏠 Direct
-  
+
   # tailscale组网直连
   - DOMAIN-SUFFIX,tailscale.com,🏠 Direct
   - DOMAIN-SUFFIX,tailscale.io,🏠 Direct
@@ -156,6 +158,9 @@ rules:
   - DOMAIN-SUFFIX,coioai.com,🏠 Direct
   - DOMAIN-SUFFIX,tmgcai.com,🏠 Direct
   - DOMAIN-SUFFIX,cou.edu.kg,🏠 Direct
+  
+  # GZU
+  - DOMAIN-SUFFIX,gzu.edu.cn,🏠 Direct
 
   # 通用规则
   - RULE-SET,private,🏠 Direct
