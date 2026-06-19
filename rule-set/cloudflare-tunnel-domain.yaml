@@ -1,0 +1,9 @@
+payload:
+  - ".argotunnel.com"
+  - ".cftunnel.com"
+  - "api.cloudflare.com"
+  - "region1.v2.argotunnel.com"
+  - "region2.v2.argotunnel.com"
+  - "_v2-origintunneld._tcp.argotunnel.com"
+  - "update.argotunnel.com"
+  - "cfd-features.argotunnel.com"
